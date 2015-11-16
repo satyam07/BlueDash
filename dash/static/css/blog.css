@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #000111;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
@@ -56,6 +56,3 @@ h1, h2, h3, h4, h5, h6 {
     color: #000000;
 }
 
- p {
-    text-overflow: ellipsis; /* will make [...] at the end */ 
-    }
