@@ -1,33 +1,13 @@
-{% load staticfiles %}
-
-<html>
-    <head>
-    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-        <title>Element Blue</title>
-    </head>
-    <body>
-        <div class="page-header">
-    <h1><a href="/">Dashboard</a></h1>
-</div>
-
-<div class="content container">
-    <div class="row">
-        <div class="col-md-12">
+{% extends 'dash/base.html' %}
+{% block content %}
             {% for post in posts %}
                 <div class="post">
                     <div class="date">
-                        <h6>Published: {{ post.published_date }}</h6>
-                        <h6>Author: {{ post.author }}</h6>
+                        <p>Published: {{ post.published_date }}</p>
+                        <p>Author: {{ post.author }}</p>
                     </div>
-                    <h2><a href="">{{ post.title }}</a></h2>
+                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
                     <p>{{ post.text|linebreaks }}</p>
                 </div>
             {% endfor %}
-        </div>
-    </div>
-</div>
-    </body>
-</html>
+        {% endblock %}
