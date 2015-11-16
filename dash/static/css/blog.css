@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
  p {
     text-overflow: ellipsis; /* will make [...] at the end */
-    width: 370px; /* change to your preferences */
+
     white-space: nowrap; /* paragraph to one line */
-    overflow:hidden; /* older browsers */
+ 
     }
