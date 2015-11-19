@@ -24,6 +24,10 @@ body {
     margin-left: 40px;
 }
 
+.date{
+  background: linear-gradient(to right, white, violet) ;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Titillium Web', sans-serif;
 }
@@ -45,17 +49,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .post {
     margin-bottom: 70px;
+    width: inherit;
 }
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
-
-
-
-
-
-
-
-  
-
