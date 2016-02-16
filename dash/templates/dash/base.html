@@ -16,6 +16,7 @@
     <p class="top-menu">Hello {{ user.username }} <a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a></p>
     {% else %}
     <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu">Login</a>
+    <a href="{% url 'dash.views.register_user' %}" class="top-menu">Register</a>
     {% endif %}
         <h1><a href="{% url 'dash.views.post_list' %}">Dashboard</a></h1>
     </div>

@@ -8,4 +8,7 @@ urlpatterns = patterns('',
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
     url(r'', include('dash.urls')),
+    url(r'^accounts/register/$', 'dash.views.register_user'),
+    url(r'^accounts/register_success/$', 'dash.views.register_success'),
+    
 )

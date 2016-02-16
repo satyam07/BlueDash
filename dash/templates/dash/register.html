@@ -1,0 +1,13 @@
+{% extends 'dash/base.html' %}
+{% block content %}
+
+<h2> Register </h2>
+
+<form action = "/accounts/register/" method="post"> {% csrf_token %}
+	    <p>Username {{ form.username }} </p>
+        <p>Password {{ form.password1 }} </p>
+        <p>Retype Password {{ form.password2 }} </p>
+		<input type="submit" value="Register"/>
+</form>
+
+{% endblock %}
